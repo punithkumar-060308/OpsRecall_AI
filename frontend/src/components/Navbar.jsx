@@ -53,7 +53,17 @@ export default function Navbar({
           disabled={isRefreshing}
           title="Refresh incident telemetry and connection status"
         >
-          <span className="refresh-icon">🔄</span>
+          <span className="refresh-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 12a8 8 0 0 1-13.66 5.66M4 12a8 8 0 0 1 13.66-5.66M4 4v6h6M20 20v-6h-6"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
           <span className="refresh-label">{isRefreshing ? 'Syncing…' : 'Refresh'}</span>
         </button>
 
